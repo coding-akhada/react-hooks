@@ -2,22 +2,9 @@ import React, { useEffect, useState } from "react";
 
 const UseEffect = () => {
   const [progress, setProgress] = useState(0);
+  const time = 500;
 
   // useEffect = componentDidMount, componentDidUpdate, componentWillUnmount
-
-  // useEffect(() => {
-  //   console.log("Component mounted");
-
-  //   let timer = setInterval(() => {
-  //     setProgress((prev) => {
-  //       if (prev === 100) {
-  //         return 0;
-  //       }
-  //       return Math.min(prev + 10, 100);
-  //     });
-  //   }, 500);
-  // }, []);
-
   useEffect(() => {
     console.log("Component mounted");
     let timer;
@@ -30,7 +17,7 @@ const UseEffect = () => {
         }
         return Math.min(prev + 10, 100);
       });
-    }, 500);
+    }, time);
     // }
 
     // Cleanup function
@@ -52,7 +39,7 @@ const UseEffect = () => {
             height: "50px",
             width: `${progress}%`,
             maxWidth: "100%",
-            transition: "0.5s linear",
+            transition: `${time}ms linear`,
           }}
         >
           {progress}

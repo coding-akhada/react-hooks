@@ -1,4 +1,5 @@
 import UseCallback from "./hooks/UseCallback/UseCallback_Hook";
+import UseEffect from "./hooks/UseEffect_Hook";
 
 function App() {
   return (
@@ -8,8 +9,8 @@ function App() {
         <hr />
       </header>
       <main style={{ padding: "0 50px" }}>
-        {/* <UseEffect /> */}
-        <UseCallback />
+        <UseEffect />
+        {/* <UseCallback /> */}
       </main>
     </div>
   );
